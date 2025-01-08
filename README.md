@@ -45,9 +45,9 @@ Proportions of upbeat vs. sad songs remained consistent across the years.
 ___________________
 TOOLS AND TECHNOLOGIES
 
-Programming: Python (Pandas, NumPy)
-Data Visualization: Matplotlib, Seaborn
-Data Collection: Spotify and Apple Music APIs
+1. Programming: Python (Pandas, NumPy)
+2. Data Visualization: Matplotlib, Seaborn
+3. Data Collection: Spotify and Apple Music APIs
 
 ___________________
 LIMITATIONS
@@ -62,7 +62,10 @@ FUTURE WORK
 Incorporate lyrical analysis using NLP to better understand emotional tone.
 Expand analysis to include niche and less mainstream genres.
 Explore the role of cultural and environmental factors in shaping music preferences.
-Team
+
+___________________
+TEAM
+
 Kenjee Koh
 Becky Wang
 Vy Nguyen
