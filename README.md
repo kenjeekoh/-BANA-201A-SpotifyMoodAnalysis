@@ -86,7 +86,11 @@ Our findings challenge the assumption that listeners gravitated toward sadder mu
 | **Energy** | 0.74  | 0.76  | 0.73  | 0.21 (Not Significant) |  
 | **Valence** | 0.57  | 0.59  | 0.55  | 0.18 (Not Significant) |  
 | **Acousticness** | 0.22  | 0.19  | 0.26  | 0.12 (Not Significant) |  
-| **Loudness
+| **Loudness (dB)** | -5.2  | -4.9  | -5.5  | 0.29 (Not Significant) |  
+| **Mode (Major %)** | 65%  | 68%  | 62%  | 0.58 (Not Significant) |  
+
+**Conclusion:**  
+Our findings confirm that **music preferences remained stable before and after the pandemic**. Despite minor fluctuations in energy and valence, **listeners did not significantly shift toward mellow or sadder music.**  
 
 ---
 
