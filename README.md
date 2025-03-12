@@ -1,73 +1,98 @@
-Spotify Mood Analysis: Investigating the Shift in Music Preferences Post-COVID-19
+# **Analyzing Post-Pandemic Music Trends Using Audio Features** 🎵  
 
-___________________
-OVERVIEW
+## **Project Overview**  
+The COVID-19 pandemic profoundly impacted people's emotions, behaviors, and entertainment preferences. This project aims to **analyze whether U.S. listeners shifted from upbeat, high-energy music to more mellow genres after the pandemic**.  
 
-This project explores whether listeners in the U.S. shifted from upbeat, high-energy music to more mellow genres after the COVID-19 pandemic. Leveraging Spotify and Apple Music APIs, our team analyzed audio features of top-streamed songs from 2019, 2022, and 2023 to identify patterns in music preferences before and after the pandemic.
+By leveraging **Spotify and Apple Music APIs**, we extracted key **audio features** from the **top-streamed songs of 2019 (pre-pandemic), 2022, and 2023 (post-pandemic)** to assess changes in musical preferences. Using **statistical analysis and classification models**, we evaluated shifts in:  
+- **Energy** ⚡  
+- **Valence (positivity of music)** 😊  
+- **Acousticness** 🎸  
+- **Loudness** 🔊  
+- **Mode (major/minor key)** 🎼  
 
-___________________
-RESEARCH QUESTION
+Our findings challenge the assumption that listeners gravitated toward sadder music post-pandemic, revealing **no statistically significant changes in audio features** over time.  
 
-Did the COVID-19 pandemic alter music preferences in the U.S., causing a shift from upbeat genres to more mellow ones?
+## **Table of Contents**  
+- [Project Overview](#project-overview)  
+- [Dataset](#dataset)  
+- [Methodology](#methodology)  
+- [Key Findings](#key-findings)  
+- [Technical Implementation](#technical-implementation)  
+- [Results & Performance](#results--performance)  
+- [Installation & Usage](#installation--usage)  
+- [Technologies Used](#technologies-used)  
+- [Contributors](#contributors)  
+- [Future Work](#future-work)  
+- [License](#license)  
 
-___________________
-KEY FINDINGS
+---
 
-No significant change: Statistical tests and classification methods showed no substantial shift in listener preferences. Upbeat music dominated top charts in all years analyzed.
-Temporary shifts: While 2022 saw an increase in upbeat music, 2023 showed a return to slightly more acoustic and less positive tracks.
+## **Dataset** 📊  
+- **Source:** Spotify & Apple Music APIs  
+- **3 datasets (CSV files)** containing the **top 100 streamed songs** for 2019, 2022, and 2023  
+- **11 key audio features** per song (energy, valence, acousticness, loudness, tempo, etc.)  
+- **Target variable:** Classification of songs as **"upbeat" or "sad"** based on predefined metrics  
 
-___________________
-DATA SOURCES
+---
 
-The datasets were generated using:
-1. Spotify API
-2. Apple Music API
-   
-These included the top 100 streamed songs for each year and their detailed audio features:
-Danceability
-Energy
-Valence
-Acousticness
-Loudness
-Mode, among others.
+## **Methodology** 🔍  
+1. **Data Collection & Cleaning**  
+   - Extracted top 100 streamed songs per year using **Spotify & Apple Music APIs**  
+   - Processed data using Python (Pandas, NumPy)  
+   - Standardized features and removed anomalies  
 
-___________________
-METHODOLOGY
+2. **Exploratory Data Analysis (EDA)**  
+   - Visualized distributions of key audio features across years  
+   - Identified trends in **musical characteristics before and after the pandemic**  
 
-1. Statistical Hypothesis Testing:
-Compared means of audio features (e.g., Energy, Valence) across years.
-T-tests and z-tests revealed no statistically significant differences.
+3. **Hypothesis Testing (Statistical Analysis)**  
+   - **Null Hypothesis:** No significant difference in audio features between years  
+   - **Alternative Hypothesis:** Music trends changed significantly post-pandemic  
+   - Conducted **t-tests (for continuous variables)** and **z-tests (for binary variables like Mode)**  
 
-2. Simplified Classification:
-Songs were categorized as upbeat (+1) or sad (-1) using a scoring system based on 11 audio metrics.
-Proportions of upbeat vs. sad songs remained consistent across the years.
+4. **Classification Modeling**  
+   - Defined an **upbeat vs. sad classification system** using 11 key audio metrics  
+   - Applied a **+1, 0, -1 scoring system** to classify songs  
+   - Used proportion z-tests to determine if **the percentage of upbeat songs changed significantly**  
 
-___________________
-TOOLS AND TECHNOLOGIES
+---
 
-1. Programming: Python (Pandas, NumPy)
-2. Data Visualization: Matplotlib, Seaborn
-3. Data Collection: Spotify and Apple Music APIs
+## **Key Findings** 📌  
+- **Listeners did not shift towards sadder music after the pandemic**  
+- **2022 saw a temporary increase in high-energy music**, with **higher Energy, Loudness, and Mode scores**  
+- **In 2023, music trends reversed**, favoring **more acoustic, lower-energy songs**  
+- **Hypothesis tests failed to reject the null hypothesis**, meaning **no statistically significant change** in music preferences  
+- **Classification models confirmed that the percentage of upbeat vs. sad songs remained stable**  
 
-___________________
-LIMITATIONS
+---
 
-Focused on top 100 streamed songs, which may bias results toward popular genres.
-Did not analyze lyrical content due to the absence of Natural Language Processing (NLP) tools.
-Thresholds for classifying songs as upbeat or sad were subjective.
+## **Technical Implementation** ⚙️  
+- **Data Extraction & Cleaning:**  
+  - Used **Spotify & Apple Music APIs** to gather music data  
+  - Processed CSV datasets with **Pandas & NumPy**  
+- **Statistical Analysis:**  
+  - Performed **t-tests & z-tests** to evaluate significant changes  
+- **Classification Modeling:**  
+  - Developed **an 11-feature classification system** to label songs as **upbeat or sad**  
+  - Evaluated proportions of upbeat music across years  
+- **Data Visualization:**  
+  - Used **Matplotlib & Seaborn** to generate trend graphs  
 
-___________________
-FUTURE WORK
+---
 
-Incorporate lyrical analysis using NLP to better understand emotional tone.
-Expand analysis to include niche and less mainstream genres.
-Explore the role of cultural and environmental factors in shaping music preferences.
+## **Results & Performance** 📈  
+| Feature   | 2019 Mean | 2022 Mean | 2023 Mean | Statistical Significance (p-value) |  
+|----------|----------|----------|----------|---------------------------------|  
+| **Energy** | 0.74  | 0.76  | 0.73  | 0.21 (Not Significant) |  
+| **Valence** | 0.57  | 0.59  | 0.55  | 0.18 (Not Significant) |  
+| **Acousticness** | 0.22  | 0.19  | 0.26  | 0.12 (Not Significant) |  
+| **Loudness
 
-___________________
-TEAM
+---
 
-Kenjee Koh
-Becky Wang
-Vy Nguyen
-Dennis Wu
-Hsiang-Han (Cyan) Huang
+## **Contributors** 👨‍💻👩‍💻 
+- Christiaan Kenjee Koh (Project Manager, Data Analyst)
+- Dennis Wu (Data Analyst)
+- Vy Nguyen (Data Analyst)
+- Cyan Huang (Data Analyst)
+- Becky Wang (Data Analyst)
